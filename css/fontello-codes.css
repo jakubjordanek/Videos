@@ -1,0 +1,8 @@
+
+.icon-home:before { content: '\e800'; } /* '' */
+.icon-user:before { content: '\e801'; } /* '' */
+.icon-videocam:before { content: '\e802'; } /* '' */
+.icon-off:before { content: '\e803'; } /* '' */
+.icon-heart:before { content: '\e804'; } /* '' */
+.icon-upload:before { content: '\e805'; } /* '' */
+.icon-ok-circled:before { content: '\f06d'; } /* '' */

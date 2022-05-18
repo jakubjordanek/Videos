@@ -1,0 +1,29 @@
+body
+{
+    margin: 0 !important;
+    background-color: #18191a;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+a.link-logo
+{
+    color: #FF3333;
+    text-decoration: none;
+}
+
+a.link-white
+{
+    color: #ffffff;
+}
+
+a.link-video
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+i
+{
+    font-size: 18px !important;
+}

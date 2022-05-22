@@ -22,7 +22,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>YourVideo</title>
+        <title>VIDEOS</title>
 
         <meta name="author" content="Jakub Jordanek">
         <meta name="description" content="">
@@ -75,7 +75,7 @@
                         echo '
                             <div id="header">
                                 <a href="profile.php?id='.$data[1].'" class="link-video">
-                                    <img src="avatar.png" width="36">
+                                    <img src="avatar.jpg" width="36">
                                     <span>
                                         '.$data[10];
 

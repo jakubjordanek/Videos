@@ -11,7 +11,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>YourVideo</title>
+        <title>VIDEOS</title>
 
         <meta name="author" content="Jakub Jordanek">
         <meta name="description" content="">
@@ -76,7 +76,7 @@
                         </div>
 
                         <div id="profile-avatar">
-                            <img src="avatar.png" width="64">
+                            <img src="avatar.jpg" width="64">
                             <span>
                                 <h4>
                                     '.$data['username'];
@@ -87,10 +87,18 @@
                                     }
 
                     echo '
-                                </h4>
-                                '.$count['total'].' followers
-                            </span>
-                    ';
+                                </h4>';
+                                
+                                if ($count['total'] == 1)
+                                {
+                                    echo $count['total'].' follower';
+                                }
+                                else
+                                {
+                                    echo $count['total'].' followers';
+                                }
+                                
+                    echo '</span>';
 
                     if (isset($_SESSION['logged']))
                     {

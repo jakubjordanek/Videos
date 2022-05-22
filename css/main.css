@@ -20,7 +20,7 @@
 
 #sidebar h1::before
 {
-    content: "YourVideo";
+    content: "VIDEOS";
 }
 
 #sidebar a
@@ -168,7 +168,7 @@
 
     #sidebar h1::before
     {
-        content: "YV";
+        content: "V";
     }
 
     #sidebar a

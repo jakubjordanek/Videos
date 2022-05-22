@@ -17,7 +17,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>YourVideo</title>
+        <title>VIDEOS</title>
 
         <meta name="author" content="Jakub Jordanek">
         <meta name="description" content="">
@@ -66,7 +66,7 @@
                 }
                 else
                 {
-                    $query = @$connect->query("SELECT v.id, v.user_id, v.title, v.thumbnail, u.username, v.views, v.date FROM videos AS v INNER JOIN users AS u ON v.user_id=u.id INNER JOIN followers AS f ON f.followed_id=v.user_id WHERE f.follower_id=".$_SESSION['id']." ORDER BY v.id DESC");
+                    $query = @$connect->query("SELECT v.id, v.user_id, v.title, v.thumbnail, u.username, u.verified, v.views, v.date FROM videos AS v INNER JOIN users AS u ON v.user_id=u.id INNER JOIN followers AS f ON f.followed_id=v.user_id WHERE f.follower_id=".$_SESSION['id']." ORDER BY v.id DESC");
                     while ($data = $query->fetch_array())
                     {
                         echo '
@@ -84,6 +84,15 @@
                                         '.$data['username'].'
                                     </a> 
                                     
+                        ';
+                        
+                        if ($data['verified'] === "yes")
+                        {
+                            echo '<i class="icon-ok-circled"></i>';
+                        }
+                                    
+                        echo '
+
                                     &bull; '.$data['views'].' views &bull; '.date("m/d/Y", strtotime($data['date'])).'
                                 </span>
                             </div>

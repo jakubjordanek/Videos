@@ -15,7 +15,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>YourVideo</title>
+        <title>VIDEOS</title>
 
         <meta name="author" content="Jakub Jordanek">
         <meta name="description" content="">
@@ -27,7 +27,7 @@
     </head>
     <body>
         <div id="login-header">
-            <a href="index.php" class="link-logo">YourVideo</a>
+            <a href="index.php" class="link-logo">VIDEOS</a>
         </div>
 
         <div id="login-panel">
@@ -42,7 +42,7 @@
         </div>
 
         <div id="login-footer">
-            2022 &copy; YourVideo
+            2022 &copy; VIDEOS
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

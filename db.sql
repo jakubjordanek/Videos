@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2022 at 05:01 PM
+-- Generation Time: May 22, 2022 at 07:30 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `yourvideo`
+-- Database: `videos`
 --
 
 -- --------------------------------------------------------
@@ -37,8 +37,8 @@ CREATE TABLE `followers` (
 --
 
 INSERT INTO `followers` (`followed_id`, `follower_id`) VALUES
-(1, 2),
-(2, 1);
+(2, 1),
+(1, 2);
 
 -- --------------------------------------------------------
 
@@ -60,7 +60,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `email`, `password`, `username`, `verified`) VALUES
 (1, 'kuba.jordanek@gmail.com', '$2y$10$Y2zSRUiUQE9eSS1X2LIhIuGduezJSUJzUt5uhjdVw8agX9IVs5olS', 'Yordano', 'yes'),
-(2, 'thekokspl@adres.com', '$2y$10$yHEDJSraWhNHgcXSwwJU9e/UW97lhFevEOhIX7zmHtQeigt22Z.y6', 'TheKoksPL', 'no');
+(2, 'test@adres.com', '$2y$10$Y2zSRUiUQE9eSS1X2LIhIuGduezJSUJzUt5uhjdVw8agX9IVs5olS', 'Test', 'no');
 
 -- --------------------------------------------------------
 
@@ -83,7 +83,7 @@ CREATE TABLE `videos` (
 --
 
 INSERT INTO `videos` (`id`, `user_id`, `title`, `video`, `thumbnail`, `date`, `views`) VALUES
-(1, 1, 'Poradnik do GTA V!', 'gta.mp4', 'gta.jpg', '2022-04-23', 286);
+(1, 1, 'Poradnik do GTA V!', 'gta.mp4', 'gta.jpg', '2022-04-23', 291);
 
 --
 -- Indexes for dumped tables

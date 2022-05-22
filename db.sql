@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 18, 2022 at 03:57 PM
--- Server version: 10.4.21-MariaDB
--- PHP Version: 8.0.12
+-- Generation Time: May 22, 2022 at 05:01 PM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,25 +39,6 @@ CREATE TABLE `followers` (
 INSERT INTO `followers` (`followed_id`, `follower_id`) VALUES
 (1, 2),
 (2, 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `likes`
---
-
-CREATE TABLE `likes` (
-  `video_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `type` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `likes`
---
-
-INSERT INTO `likes` (`video_id`, `user_id`, `type`) VALUES
-(3, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -102,9 +83,7 @@ CREATE TABLE `videos` (
 --
 
 INSERT INTO `videos` (`id`, `user_id`, `title`, `video`, `thumbnail`, `date`, `views`) VALUES
-(1, 1, 'Gramy w Metin2!', 'metin2.mp4', 'metin2.jpg', '2022-04-17', 64),
-(2, 1, 'Poradnik do Ligi Legend', 'liga.mp4', 'liga.jpg', '2022-04-17', 223),
-(3, 2, 'KOksPL w mc! jak szybko znaleźć diaxy', 'mc.mp4', 'mc.jpg', '2022-04-18', 951);
+(1, 1, 'Poradnik do GTA V!', 'gta.mp4', 'gta.jpg', '2022-04-23', 286);
 
 --
 -- Indexes for dumped tables
@@ -116,13 +95,6 @@ INSERT INTO `videos` (`id`, `user_id`, `title`, `video`, `thumbnail`, `date`, `v
 ALTER TABLE `followers`
   ADD KEY `followed_id` (`followed_id`),
   ADD KEY `follower_id` (`follower_id`);
-
---
--- Indexes for table `likes`
---
-ALTER TABLE `likes`
-  ADD KEY `video_id` (`video_id`),
-  ADD KEY `user_id` (`user_id`);
 
 --
 -- Indexes for table `users`
@@ -151,7 +123,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `videos`
 --
 ALTER TABLE `videos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
@@ -163,13 +135,6 @@ ALTER TABLE `videos`
 ALTER TABLE `followers`
   ADD CONSTRAINT `followers_ibfk_1` FOREIGN KEY (`followed_id`) REFERENCES `users` (`id`),
   ADD CONSTRAINT `followers_ibfk_2` FOREIGN KEY (`follower_id`) REFERENCES `users` (`id`);
-
---
--- Constraints for table `likes`
---
-ALTER TABLE `likes`
-  ADD CONSTRAINT `likes_ibfk_1` FOREIGN KEY (`video_id`) REFERENCES `videos` (`id`),
-  ADD CONSTRAINT `likes_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`);
 
 --
 -- Constraints for table `videos`

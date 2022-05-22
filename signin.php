@@ -31,7 +31,7 @@
         </div>
 
         <div id="login-panel">
-            <h3>SIGN IN</h3>
+            <h3>LOG IN</h3>
 
             <form method="POST" action="login.php">
                 <input type="text" placeholder="EMAIL" name="email">
